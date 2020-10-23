@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1603475325 source:c:\users\lenovo\desktop\olivito.gonzalo.labipp1g\parcialolivito\auto.c
+1603478572 source:c:\users\lenovo\desktop\olivito.gonzalo.labipp1g\parcialolivito\auto.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -21,7 +21,7 @@
 	<string.h>
 	"marca.h"
 
-1602886196 source:c:\users\lenovo\desktop\olivito.gonzalo.labipp1g\parcialolivito\utn.c
+1603476886 source:c:\users\lenovo\desktop\olivito.gonzalo.labipp1g\parcialolivito\utn.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -39,9 +39,9 @@
 	"servicios.h"
 	"trabajo.h"
 
-1603474748 c:\users\lenovo\desktop\olivito.gonzalo.labipp1g\parcialolivito\hardcodeo.h
+1603477950 c:\users\lenovo\desktop\olivito.gonzalo.labipp1g\parcialolivito\hardcodeo.h
 
-1603473070 c:\users\lenovo\desktop\olivito.gonzalo.labipp1g\parcialolivito\auto.h
+1603477989 c:\users\lenovo\desktop\olivito.gonzalo.labipp1g\parcialolivito\auto.h
 	"marca.h"
 	"color.h"
 
@@ -65,7 +65,7 @@
 	"auto.h"
 	"servicios.h"
 
-1603475337 source:c:\users\lenovo\desktop\olivito.gonzalo.labipp1g\parcialolivito\trabajo.c
+1603478085 source:c:\users\lenovo\desktop\olivito.gonzalo.labipp1g\parcialolivito\trabajo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

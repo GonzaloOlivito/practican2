@@ -26,5 +26,5 @@ int hardcodeo(eAuto vec[], int tam);
 int modificarAuto(eAuto vec[], int tam, eMarca marca[], int tamM, eColor color[], int tamc);
 int bajaAuto(eAuto vec[], int tam, eMarca marca[], int tamM, eColor color[], int tamc);
 void ordenar(eAuto vec[], int tam);
-int buscarAutoPorPatente(eAuto vec[], int tam, char patenteAux[]);
+int buscarPatente(eAuto vec[], int tam, char patenteAux[]);
 

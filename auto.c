@@ -230,26 +230,26 @@ int modificarAuto(eAuto vec[], int tam, eMarca marca[], int tamM, eColor color[]
 
 int bajaAuto(eAuto vec[], int tam, eMarca marca[], int tamM, eColor color[], int tamc)
 {
-    int id;
+
     char eleccion;
     int retorno=-1;
-    int esta;
+    char patenteAux[6];
+
+
     system("cls");
     printf("***MENU BAJA***\n\n");
    mostrarAutos(vec,tam,marca,tamM,color,tamc);
+    printf("Ingrese la patente a buscar");
+    scanf("%s",patenteAux);
+    //getStringAlphaNum(6,"Ingrese la patente a buscar (XXX123):",patenteAux);
+   int esta=buscarPatente(vec,tam,patenteAux);
 
-    getIntRange(&id,0,9999,"Ingrese el id a dar de baja: ");
-    esta=buscarAuto(id,vec,tam);
-    if(esta== -1)
+    if(esta == -1)
     {
-        printf("Id mal ingresado, reintente.");
+        printf("Patente mal ingresada, reintente.");
     }
     else
     {
-        system("cls");
-        printf("\nSelecciono: \n");
-        printf("ID      MARCA      COLOR     PATENTE   MODELO     \n");
-        mostrarAuto(vec[esta],marca,tamM,color,tamc);
         getChar(3,&eleccion,"Confirma baja? s/n: ");
         if(eleccion == 's')
         {
@@ -288,16 +288,17 @@ void ordenar(eAuto vec[], int tam)
     }
 }
 
-int buscarAutoPorPatente(eAuto vec[], int tam, char patenteAux[])
+int buscarPatente(eAuto vec[], int tam, char patenteAux[])
 {
-    int retorno = -1;
-    for(int i=0; i<tam; i++)
-    { if(vec[i].isEmpty==0 && strcmp(vec[i].patentes,patenteAux)== 0)
+      int indice = -1;
 
-            {
-                retorno = i;
-            }
+    for(int i=0; i < tam; i++)
+    {
+        if((vec[i].isEmpty == 1)&& strcmp(vec[i].patentes, patenteAux)==0)
+        {
+            indice = i;
+            break;
+        }
     }
-
-    return retorno;
+    return indice;
 }

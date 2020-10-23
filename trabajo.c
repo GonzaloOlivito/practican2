@@ -45,27 +45,19 @@ int altaTrabajo(int idTrabajo, eTrabajo trabajos[], int tamtrab, eAuto vec[], in
     int retorno=0;
     char patenteAux[20];
     int libre=buscarLibreTrabajo(trabajos,tamtrab);
-    int indicePatente=buscarAutoPorPatente(vec,tam,patenteAux);
-
-
-
-    if(libre==-1)
-    {
-        printf("No hay lugar\n");
-    }
-    else
-    {
-
 
         mostrarAutos(vec,tam,marcas,tamM,colores,tamc);
         getStringAlphaNum(20,"Ingrese la patente(XXX123):",patenteAux);
-
+        int indicePatente=buscarPatente(vec,tam,patenteAux);
         if(indicePatente==-1)
         {
             printf("Patente mal ingresada o inexistente. Reintente");
         }
-
         else
+            if(libre==-1)
+        {
+            printf("No hay mas lugar");
+        }else
         {
             strcpy(trabajos[libre].patente, patenteAux);
             listarServicios(servicios,tams);
@@ -80,9 +72,6 @@ int altaTrabajo(int idTrabajo, eTrabajo trabajos[], int tamtrab, eAuto vec[], in
             retorno=1;
             printf("\nAlta de trabajo exitosa! \n");
         }
-
-
-    }
 
     return retorno;
 }
